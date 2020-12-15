@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
-use App\User;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController

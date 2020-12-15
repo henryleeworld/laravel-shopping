@@ -1,6 +1,9 @@
 <?php
 
-use App\Product;
+namespace Database\Seeders;
+
+use App\Models\Product;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 
 class ProductsTableSeeder extends Seeder
@@ -12,7 +15,7 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker\Factory::create();
+        $faker = Factory::create();
         foreach(range(2,3) as $id)
         {
             foreach(range(1,3) as $index)
@@ -24,10 +27,10 @@ class ProductsTableSeeder extends Seeder
                     'created_by_id' => $id,
                 ]);
             
-                $product->addMediaFromUrl(public_path("images/featured$index.jpg"))->toMediaCollection('main_photo');
+                $product->addMediaFromUrl(asset("images/featured$index.jpg"))->toMediaCollection('main_photo');
                 foreach($faker->randomElements(range(1,3), 3) as $index)
                 {
-                    $product->addMediaFromUrl(public_path("images/reserve-slide$index.jpg"))->toMediaCollection('additional_photos');
+                    $product->addMediaFromUrl(asset("images/reserve-slide$index.jpg"))->toMediaCollection('additional_photos');
                 }
             }
         }
