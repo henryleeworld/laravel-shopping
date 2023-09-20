@@ -1,8 +1,9 @@
-# Laravel 8 購物
+# Laravel 10 購物
 
-精選了世界名牌，藥妝，特產，必買伴手禮，在有限的旅行時間中不必為應當買什麼而苦惱！Laravel 8 購物主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
+精選了世界名牌，藥妝，特產，必買伴手禮，在有限的旅行時間中不必為應當買什麼而苦惱！
 
 ## 使用方式
+- 打開 php.ini 檔案，啟用 PHP 擴充模組 gd，並重啟服務器。
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
 ```sh
 $ git clone
@@ -12,7 +13,7 @@ $ git clone
 ```sh
 $ composer install
 ```
-- 產⽣ Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
+- 產生 Laravel 要使用的一組 32 字元長度的隨機字串 APP_KEY 並存在 .env 內。
 ```sh
 $ php artisan key:generate
 ```
@@ -24,9 +25,13 @@ $ php artisan migrate --seed
 ```sh
 $ php artisan storage:link
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以登入經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
@@ -34,8 +39,8 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/di6pL0L.png)
+![](https://i.imgur.com/bBKybtT.png)
 > 新增產品，清楚的描述產品內容，比起沒有描述或描述不清楚的產品，更容易被售出
 
-![](https://i.imgur.com/x20N6vC.png)
+![](https://i.imgur.com/1zvfZVV.png)
 > 思考要進什麼樣的產品，要知道現在什麼產品比較熱門
