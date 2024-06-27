@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UsersTableSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class UsersTableSeeder extends Seeder
                 'id'             => 1,
                 'name'           => 'Admin',
                 'email'          => 'admin@admin.com',
-                'password'       => '$2y$10$bvYhN6JwpRJ/3e8mwEzpiu9YUxDi0QfbJM3GjQAa9fiz0QE5SACB6',
+                'password'       => Hash::make('password'),
                 'remember_token' => null,
                 'subdomain'      => null,
             ],
@@ -22,7 +23,7 @@ class UsersTableSeeder extends Seeder
                 'id'             => 2,
                 'name'           => 'Company 1',
                 'email'          => 'company1@company1.com',
-                'password'       => '$2y$10$bvYhN6JwpRJ/3e8mwEzpiu9YUxDi0QfbJM3GjQAa9fiz0QE5SACB6',
+                'password'       => Hash::make('password'),
                 'remember_token' => null,
                 'subdomain'      => 'company1',
             ],
@@ -30,7 +31,7 @@ class UsersTableSeeder extends Seeder
                 'id'             => 3,
                 'name'           => 'Company 2',
                 'email'          => 'company2@company2.com',
-                'password'       => '$2y$10$bvYhN6JwpRJ/3e8mwEzpiu9YUxDi0QfbJM3GjQAa9fiz0QE5SACB6',
+                'password'       => Hash::make('password'),
                 'remember_token' => null,
                 'subdomain'      => 'company2',
             ],
